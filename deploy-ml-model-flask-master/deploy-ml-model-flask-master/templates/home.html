@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IRIS FLOWER DETECTION</title>
+    <style>
+        body {
+            background-color: #f7eded; /* เปลี่ยนสีพื้นหลังเป็นสีแดงอ่อน */
+            text-align: center;
+            font-family: Arial, sans-serif; /* เปลี่ยนแบบอักษรให้เป็น Arial หรือแบบอักษรที่ต้องการ */
+        }
+        h1 {
+            font-size: 36px; /* เพิ่มขนาดของตัวอักษรให้ใหญ่ขึ้น */
+            color: #6e1c25; /* เปลี่ยนสีของข้อความให้ตรงกับเฟี้ยว */
+            text-shadow: 2px 2px 4px #8f8f8f; /* เพิ่มเอฟเฟ็กต์เงาให้กับข้อความ */
+            margin-bottom: 30px; /* กำหนดระยะห่างด้านล่างของหัวข้อ */
+        }
+        form {
+            margin-top: 50px;
+        }
+        input[type="text"] {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px; /* เปลี่ยนขนาดตัวอักษรในช่องข้อมูล */
+        }
+        input[type="submit"] {
+            background-color: #4CAF50; /* เปลี่ยนสีปุ่มเป็นสีเขียว */
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* เปลี่ยนขนาดตัวอักษรในปุ่ม */
+        }
+        img {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>IRIS FLOWER DETECTION</h1>
+    <form method="POST" action="{{url_for('home')}}">
+        <b>
+            First value: <input type="text" name="a" placeholder="Enter 1"><br><br>
+            Second value: <input type="text" name="b" placeholder="Enter 2"><br><br>
+            Third value: <input type="text" name="c" placeholder="Enter 3"><br><br>
+            Fourth value: <input type="text" name="d" placeholder="Enter 4"><br><br><br>
+        </b>
+        <input type="submit" value="Predict!">
+    </form>
+    <img src="static/flower1.jpg" alt="flower">
+</body>
+</html>
